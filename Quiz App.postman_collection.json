@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "2765e13e-cf2e-47d6-af78-68c1dc39f5d5",
+		"name": "Quiz App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29881425"
+	},
+	"item": [
+		{
+			"name": "Create Quiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Quiz having questions for country capitals\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/quiz/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"quiz",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Quiz",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Quiz having questions for country capitals\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/quiz/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"quiz",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"50-C5DO3Q3NJ8ORuInb8OOqohatwlQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Oct 2024 08:37:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Quiz saved successfully\",\n    \"data\": {\n        \"latestQuizId\": 3\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quizId\": 1,\n    \"questionTitle\": \"Which is the Capital of Japan\",\n    \"options\": [\"Lyon\", \"Paris\", \"Marseille\",\"Nice\"],\n    \"correctOption\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/quiz/create/question",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"quiz",
+						"create",
+						"question"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Question",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quizId\": 1,\n    \"questionTitle\": \"Which is the Capital of Japan\",\n    \"options\": [\"Lyon\", \"Paris\", \"Marseille\",\"Nice\"],\n    \"correctOption\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/quiz/create/question",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"quiz",
+								"create",
+								"question"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "70"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"46-DL+L2EVsAHsofrfGGl7Whn3W6oA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Oct 2024 08:39:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Question saved successfully\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all questions from any quiz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/quiz/info/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"quiz",
+						"info",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all questions from any quiz",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/quiz/info/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"quiz",
+								"info",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1159"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"487-aEabLtI8VCbepAua++/NMAnqLEk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Oct 2024 08:39:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Question retrived successfully\",\n    \"data\": [\n        {\n            \"questionId\": 1,\n            \"questionTitle\": \"Which is the Capital of Japan\",\n            \"options\": \"[\\\"Lyon\\\",\\\"Paris\\\",\\\"Marseille\\\",\\\"Nice\\\"]\"\n        },\n        {\n            \"questionId\": 2,\n            \"questionTitle\": \"Which is the Capital of Japan\",\n            \"options\": \"[\\\"Lyon\\\",\\\"Paris\\\",\\\"Marseille\\\",\\\"Nice\\\"]\"\n        },\n        {\n            \"questionId\": 3,\n            \"questionTitle\": \"Which is the Capital of Japan\",\n            \"options\": \"[\\\"Lyon\\\",\\\"Paris\\\",\\\"Marseille\\\",\\\"Nice\\\"]\"\n        },\n        {\n            \"questionId\": 4,\n            \"questionTitle\": \"Which is the Capital of Japan\",\n            \"options\": \"[\\\"Lyon\\\",\\\"Paris\\\",\\\"Marseille\\\",\\\"Nice\\\"]\"\n        },\n        {\n            \"questionId\": 5,\n            \"questionTitle\": \"Which is the Capital of Japan\",\n            \"options\": \"[\\\"Lyon\\\",\\\"Paris\\\",\\\"Marseille\\\",\\\"Nice\\\"]\"\n        },\n        {\n            \"questionId\": 6,\n            \"questionTitle\": \"Which is the Capital of Japan\",\n            \"options\": \"[\\\"Lyon\\\",\\\"Paris\\\",\\\"Marseille\\\",\\\"Nice\\\"]\"\n        },\n        {\n            \"questionId\": 7,\n            \"questionTitle\": \"Which is the Capital of Japan\",\n            \"options\": \"[\\\"Lyon\\\",\\\"Paris\\\",\\\"Marseille\\\",\\\"Nice\\\"]\"\n        },\n        {\n            \"questionId\": 8,\n            \"questionTitle\": \"Which is the Capital of Japan\",\n            \"options\": \"[\\\"Lyon\\\",\\\"Paris\\\",\\\"Marseille\\\",\\\"Nice\\\"]\"\n        },\n        {\n            \"questionId\": 9,\n            \"questionTitle\": \"Which is the Capital of Japan\",\n            \"options\": \"[\\\"Lyon\\\",\\\"Paris\\\",\\\"Marseille\\\",\\\"Nice\\\"]\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Save Answers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"questionId\": 5,\n      \"userId\": 2,\n      \"selectedOption\":  2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/quiz/save/answer",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"quiz",
+						"save",
+						"answer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Save Answers",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n      \"questionId\": 5,\n      \"userId\": 2,\n      \"selectedOption\":  2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/quiz/save/answer",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"quiz",
+								"save",
+								"answer"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "90"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5a-oo1x17nNOYtOmVzBCFBoW0UNb90\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Oct 2024 08:39:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"User has already given answer for this question\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Get user score for any quiz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/quiz/result?userId=2&quizId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"quiz",
+						"result"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "2"
+						},
+						{
+							"key": "quizId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:3000/v1/quiz/result?userId=2&quizId=rrrr",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/quiz/result?userId=2&quizId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"quiz",
+								"result"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2"
+								},
+								{
+									"key": "quizId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "818"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"332-gd5gmBeKGxxzoLTxekpIFlX7d8Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Oct 2024 08:40:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Score fetched successfully\",\n    \"data\": [\n        {\n            \"quizTitle\": \"Quiz having questions for country capitals\",\n            \"score\": 2,\n            \"questionsSummary\": \"[{\\\"question\\\":\\\"Which is the Capital of Japan\\\",\\\"answer\\\":\\\"correct\\\"},{\\\"question\\\":\\\"Which is the Capital of Japan\\\",\\\"answer\\\":\\\"correct\\\"},{\\\"question\\\":\\\"Which is the Capital of Japan\\\",\\\"answer\\\":\\\"correct\\\"},{\\\"question\\\":\\\"Which is the Capital of Japan\\\",\\\"answer\\\":\\\"incorrect\\\"},{\\\"question\\\":\\\"Which is the Capital of Japan\\\",\\\"answer\\\":\\\"incorrect\\\"},{\\\"question\\\":\\\"Which is the Capital of Japan\\\",\\\"answer\\\":\\\"incorrect\\\"},{\\\"question\\\":\\\"Which is the Capital of Japan\\\",\\\"answer\\\":\\\"incorrect\\\"},{\\\"question\\\":\\\"Which is the Capital of Japan\\\",\\\"answer\\\":\\\"incorrect\\\"},{\\\"question\\\":\\\"Which is the Capital of Japan\\\",\\\"answer\\\":\\\"incorrect\\\"}]\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
