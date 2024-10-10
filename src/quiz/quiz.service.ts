@@ -143,6 +143,7 @@ export class QuizService {
    *          If any error occurs, status would be 400, data would be null, 
    *          message would be an error message and error key would contain the actual error
    */
+  // For discussion
   async saveAnswers(data) : Promise<IfunctionReturnObject> {
     const transaction: Transaction = await this.quizRepository.sequelize.transaction()
     try {
